@@ -2,7 +2,7 @@
 
 echo "Installing dependencies"
 
-sudo apt install gcc g++ polybar compton rofi build-essential make libx11-dev libxft-dev libxinerama-dev pavucontrol pavucontrol-qt nitrogen sxhkd dmenu x11-xserver-utils kitty
+sudo apt install gcc g++ polybar compton rofi build-essential make libx11-dev libxft-dev libxinerama-dev pavucontrol pavucontrol-qt nitrogen sxhkd dmenu x11-xserver-utils kitty xinit rxvt-unicode
 
 echo "Finished installing dependencies"
 
@@ -26,3 +26,5 @@ cp examples/autostart $HOME/.config/berry/autostart
 cd ..
 
 cp xinitrc $HOME/.xinitrc
+echo 'sxhkd -c ~/.config/berry/sxhkdrc &' >> ~/.xinitrc
+echo 'compton &' >> ~/.xinitrc
